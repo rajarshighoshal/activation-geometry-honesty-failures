@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "Activation Geometry for Honesty Failures"
+message: "If you use this artifact, please cite the repository."
+type: software
+authors:
+  - family-names: Ghoshal
+    given-names: Rajarshi
+repository-code: "https://github.com/rajarshighoshal/activation-geometry-honesty-failures"
+abstract: >
+  Public artifact record for activation-space experiments on honesty failures in language models.
+  The release includes a paired synthetic-pressure pilot showing that pressure-induced caving to
+  false premises is strongly decodable from Llama-3.1-8B-Instruct residual-stream activations,
+  plus a graded PASS/FAIL control audit showing that an apparent steering win fails under
+  bidirectional error-type auditing.
+license: MIT
+version: "0.1.0"
+date-released: "2026-06-24"
