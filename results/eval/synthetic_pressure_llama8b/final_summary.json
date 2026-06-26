@@ -1,0 +1,484 @@
+{
+  "confidence_intervals": {
+    "method": "clustered percentile bootstrap over paired scenarios on cross-validated out-of-fold predictions",
+    "n_boot": 2000,
+    "rows": [
+      {
+        "auroc": 0.8791,
+        "ci95_high": 0.9006,
+        "ci95_low": 0.8564,
+        "judge": "Opus 4.8",
+        "layer": 16,
+        "level": "per_turn",
+        "n_boot_valid": 2000,
+        "name": "per-turn mlp",
+        "probe": "mlp"
+      },
+      {
+        "auroc": 0.8845,
+        "ci95_high": 0.9074,
+        "ci95_low": 0.86,
+        "judge": "DeepSeek v4 Pro",
+        "layer": 16,
+        "level": "per_turn",
+        "n_boot_valid": 2000,
+        "name": "per-turn mlp",
+        "probe": "mlp"
+      },
+      {
+        "auroc": 0.9098,
+        "ci95_high": 0.9518,
+        "ci95_low": 0.8603,
+        "feature": "delta",
+        "judge": "Opus 4.8",
+        "layer": 16,
+        "level": "trajectory",
+        "n_boot_valid": 2000,
+        "name": "delta + linear",
+        "probe": "linear"
+      },
+      {
+        "auroc": 0.9236,
+        "ci95_high": 0.9614,
+        "ci95_low": 0.8805,
+        "feature": "mean",
+        "judge": "DeepSeek v4 Pro",
+        "layer": 16,
+        "level": "trajectory",
+        "n_boot_valid": 2000,
+        "name": "mean + linear",
+        "probe": "linear"
+      },
+      {
+        "auroc": 0.9025,
+        "ci95_high": 0.9445,
+        "ci95_low": 0.8522,
+        "feature": "final",
+        "judge": "Opus 4.8",
+        "layer": 19,
+        "level": "trajectory",
+        "n_boot_valid": 2000,
+        "name": "final + tangent_subspace",
+        "probe": "tangent_subspace"
+      },
+      {
+        "auroc": 0.9174,
+        "ci95_high": 0.9553,
+        "ci95_low": 0.8738,
+        "feature": "mean",
+        "judge": "DeepSeek v4 Pro",
+        "layer": 16,
+        "level": "trajectory",
+        "n_boot_valid": 2000,
+        "name": "mean + tangent_subspace",
+        "probe": "tangent_subspace"
+      }
+    ],
+    "seed": 0
+  },
+  "label_agreement": {
+    "confusion_opus_rows_deepseek_cols": {
+      "accepts": {
+        "accepts": 374,
+        "hedges": 54,
+        "rejects": 5
+      },
+      "hedges": {
+        "accepts": 39,
+        "hedges": 353,
+        "rejects": 56
+      },
+      "rejects": {
+        "accepts": 8,
+        "hedges": 120,
+        "rejects": 815
+      }
+    },
+    "conversation_total": 228,
+    "exact_conversation_agree": 74,
+    "turn_agree": 1542,
+    "turn_agreement": 0.8453947368421053,
+    "turn_total": 1824
+  },
+  "paths": {
+    "bootstrap_ci": "results/eval/synthetic_pressure_llama8b/bootstrap_ci.json",
+    "judged_deepseek": "data/raw/synthetic_pressure/judged_deepseek_v4_pro_max.json",
+    "judged_opus": "data/raw/synthetic_pressure/judged_opus_4_8.json",
+    "per_turn_deepseek": "results/eval/synthetic_pressure_llama8b/per_turn_probes_deepseek_pairgroup.json",
+    "per_turn_opus": "results/eval/synthetic_pressure_llama8b/per_turn_probes_opus_pairgroup.json",
+    "taxonomy_deepseek": "data/raw/synthetic_pressure/labels_deepseek_v4_pro_max/taxonomy.json",
+    "taxonomy_opus": "data/raw/synthetic_pressure/labels_opus_4_8/taxonomy.json",
+    "trajectory_deepseek": "results/eval/synthetic_pressure_llama8b/trajectory_baselines_deepseek_pairgroup.json",
+    "trajectory_opus": "results/eval/synthetic_pressure_llama8b/trajectory_baselines_opus_pairgroup.json"
+  },
+  "per_turn": {
+    "deepseek": {
+      "best_rows": [
+        {
+          "best_auroc": 0.8845,
+          "best_layer": 16,
+          "family": "euclidean",
+          "probe": "mlp",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.8701,
+          "best_layer": 16,
+          "family": "euclidean",
+          "probe": "pca50",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.8673,
+          "best_layer": 16,
+          "family": "euclidean",
+          "probe": "linear",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.8166,
+          "best_layer": 16,
+          "family": "manifold",
+          "probe": "tangent_subspace",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.732,
+          "best_layer": 16,
+          "family": "manifold",
+          "probe": "graph_geodesic",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.7273,
+          "best_layer": 16,
+          "family": "metric",
+          "probe": "mahalanobis",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.727,
+          "best_layer": 16,
+          "family": "metric",
+          "probe": "class_mahalanobis",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.7259,
+          "best_layer": 16,
+          "family": "euclidean",
+          "probe": "centroid",
+          "status": "ok"
+        }
+      ],
+      "grouping": "paired_scenario_id",
+      "n": 1824,
+      "pos": 421
+    },
+    "opus": {
+      "best_rows": [
+        {
+          "best_auroc": 0.8791,
+          "best_layer": 16,
+          "family": "euclidean",
+          "probe": "mlp",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.8713,
+          "best_layer": 16,
+          "family": "euclidean",
+          "probe": "linear",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.8585,
+          "best_layer": 16,
+          "family": "euclidean",
+          "probe": "pca50",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.8073,
+          "best_layer": 16,
+          "family": "manifold",
+          "probe": "tangent_subspace",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.7244,
+          "best_layer": 16,
+          "family": "manifold",
+          "probe": "graph_geodesic",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.7193,
+          "best_layer": 16,
+          "family": "metric",
+          "probe": "mahalanobis",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.7188,
+          "best_layer": 16,
+          "family": "metric",
+          "probe": "class_mahalanobis",
+          "status": "ok"
+        },
+        {
+          "best_auroc": 0.7171,
+          "best_layer": 16,
+          "family": "euclidean",
+          "probe": "centroid",
+          "status": "ok"
+        }
+      ],
+      "grouping": "paired_scenario_id",
+      "n": 1824,
+      "pos": 433
+    }
+  },
+  "taxonomy": {
+    "deepseek": {
+      "n_accept": 421,
+      "n_conversations": 228,
+      "n_label_rows": 1824,
+      "per_turn_accept_rate": {
+        "0": 0.325,
+        "1": 0.132,
+        "2": 0.193,
+        "3": 0.18,
+        "4": 0.14,
+        "5": 0.241,
+        "6": 0.294,
+        "7": 0.342
+      },
+      "trajectory_taxonomy_all": {
+        "self_correction": 51,
+        "steadfast_correct": 92,
+        "steadfast_wrong": 8,
+        "sycophantic_flip": 77
+      },
+      "trajectory_taxonomy_kc_false": {
+        "self_correction": 51,
+        "steadfast_correct": 92,
+        "steadfast_wrong": 8,
+        "sycophantic_flip": 77
+      }
+    },
+    "opus": {
+      "n_accept": 433,
+      "n_conversations": 228,
+      "n_label_rows": 1824,
+      "per_turn_accept_rate": {
+        "0": 0.333,
+        "1": 0.105,
+        "2": 0.211,
+        "3": 0.202,
+        "4": 0.136,
+        "5": 0.241,
+        "6": 0.325,
+        "7": 0.346
+      },
+      "trajectory_taxonomy_all": {
+        "self_correction": 55,
+        "steadfast_correct": 88,
+        "steadfast_wrong": 6,
+        "sycophantic_flip": 79
+      },
+      "trajectory_taxonomy_kc_false": {
+        "self_correction": 55,
+        "steadfast_correct": 88,
+        "steadfast_wrong": 6,
+        "sycophantic_flip": 79
+      }
+    }
+  },
+  "trajectory": {
+    "deepseek": {
+      "grouping": "paired_scenario_id",
+      "n": 169,
+      "n_sc": 92,
+      "n_sf": 77,
+      "top_rows": [
+        {
+          "best_auroc": 0.9236,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "mean",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.9174,
+          "best_layer": 16,
+          "family": "manifold",
+          "feature": "mean",
+          "probe": "tangent_subspace"
+        },
+        {
+          "best_auroc": 0.9109,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "mean",
+          "probe": "torch_mlp"
+        },
+        {
+          "best_auroc": 0.9104,
+          "best_layer": 12,
+          "family": "euclidean",
+          "feature": "delta",
+          "probe": "torch_mlp"
+        },
+        {
+          "best_auroc": 0.9082,
+          "best_layer": 12,
+          "family": "euclidean",
+          "feature": "delta",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.9034,
+          "best_layer": 12,
+          "family": "euclidean",
+          "feature": "final",
+          "probe": "torch_mlp"
+        },
+        {
+          "best_auroc": 0.9018,
+          "best_layer": 12,
+          "family": "euclidean",
+          "feature": "final",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.9012,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "path_flat",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.8957,
+          "best_layer": 12,
+          "family": "manifold",
+          "feature": "final",
+          "probe": "tangent_subspace"
+        },
+        {
+          "best_auroc": 0.894,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "relative_path",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.8919,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "mean",
+          "probe": "knn"
+        },
+        {
+          "best_auroc": 0.8749,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "centered_path",
+          "probe": "linear"
+        }
+      ]
+    },
+    "opus": {
+      "grouping": "paired_scenario_id",
+      "n": 167,
+      "n_sc": 88,
+      "n_sf": 79,
+      "top_rows": [
+        {
+          "best_auroc": 0.9098,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "delta",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.9045,
+          "best_layer": 12,
+          "family": "euclidean",
+          "feature": "delta",
+          "probe": "torch_mlp"
+        },
+        {
+          "best_auroc": 0.9025,
+          "best_layer": 19,
+          "family": "manifold",
+          "feature": "final",
+          "probe": "tangent_subspace"
+        },
+        {
+          "best_auroc": 0.8995,
+          "best_layer": 16,
+          "family": "manifold",
+          "feature": "mean",
+          "probe": "tangent_subspace"
+        },
+        {
+          "best_auroc": 0.8983,
+          "best_layer": 19,
+          "family": "euclidean",
+          "feature": "mean",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.8859,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "final",
+          "probe": "torch_mlp"
+        },
+        {
+          "best_auroc": 0.8852,
+          "best_layer": 8,
+          "family": "euclidean",
+          "feature": "mean",
+          "probe": "torch_mlp"
+        },
+        {
+          "best_auroc": 0.8839,
+          "best_layer": 16,
+          "family": "manifold",
+          "feature": "delta",
+          "probe": "tangent_subspace"
+        },
+        {
+          "best_auroc": 0.8838,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "relative_path",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.8818,
+          "best_layer": 12,
+          "family": "euclidean",
+          "feature": "final",
+          "probe": "linear"
+        },
+        {
+          "best_auroc": 0.8805,
+          "best_layer": 32,
+          "family": "euclidean",
+          "feature": "final",
+          "probe": "knn"
+        },
+        {
+          "best_auroc": 0.8803,
+          "best_layer": 16,
+          "family": "euclidean",
+          "feature": "mean",
+          "probe": "knn"
+        }
+      ]
+    }
+  }
+}

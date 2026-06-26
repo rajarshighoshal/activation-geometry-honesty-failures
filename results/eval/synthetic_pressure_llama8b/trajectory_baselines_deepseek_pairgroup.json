@@ -1,0 +1,2825 @@
+{
+  "by_feature": {
+    "acceleration": {
+      "0": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4981
+        }
+      },
+      "12": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7239,
+          "class_mahalanobis": 0.7621,
+          "graph_geodesic": 0.7012,
+          "knn": 0.6693,
+          "linear": 0.7338,
+          "mahalanobis": 0.7236,
+          "tangent_subspace": 0.6903,
+          "torch_mlp": 0.6997
+        }
+      },
+      "16": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7523,
+          "class_mahalanobis": 0.7866,
+          "graph_geodesic": 0.7211,
+          "knn": 0.7146,
+          "linear": 0.7681,
+          "mahalanobis": 0.7537,
+          "tangent_subspace": 0.787,
+          "torch_mlp": 0.7271
+        }
+      },
+      "19": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7377,
+          "class_mahalanobis": 0.7554,
+          "graph_geodesic": 0.7156,
+          "knn": 0.6834,
+          "linear": 0.7578,
+          "mahalanobis": 0.7364,
+          "tangent_subspace": 0.7654,
+          "torch_mlp": 0.7006
+        }
+      },
+      "20": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7342,
+          "class_mahalanobis": 0.7499,
+          "graph_geodesic": 0.7099,
+          "knn": 0.6601,
+          "linear": 0.7468,
+          "mahalanobis": 0.7329,
+          "tangent_subspace": 0.7555,
+          "torch_mlp": 0.6844
+        }
+      },
+      "24": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7315,
+          "class_mahalanobis": 0.7462,
+          "graph_geodesic": 0.7278,
+          "knn": 0.6839,
+          "linear": 0.7538,
+          "mahalanobis": 0.7277,
+          "tangent_subspace": 0.7541,
+          "torch_mlp": 0.6859
+        }
+      },
+      "28": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7228,
+          "class_mahalanobis": 0.737,
+          "graph_geodesic": 0.7133,
+          "knn": 0.6693,
+          "linear": 0.7508,
+          "mahalanobis": 0.7211,
+          "tangent_subspace": 0.7473,
+          "torch_mlp": 0.7014
+        }
+      },
+      "32": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7141,
+          "class_mahalanobis": 0.7236,
+          "graph_geodesic": 0.7089,
+          "knn": 0.6897,
+          "linear": 0.761,
+          "mahalanobis": 0.7081,
+          "tangent_subspace": 0.7171,
+          "torch_mlp": 0.7023
+        }
+      },
+      "8": {
+        "n_features": 24576,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6604,
+          "class_mahalanobis": 0.7141,
+          "graph_geodesic": 0.6214,
+          "knn": 0.6222,
+          "linear": 0.6574,
+          "mahalanobis": 0.6585,
+          "tangent_subspace": 0.6184,
+          "torch_mlp": 0.621
+        }
+      }
+    },
+    "centered_path": {
+      "0": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.5059,
+          "torch_riemannian": 0.4936
+        }
+      },
+      "12": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8278,
+          "class_mahalanobis": 0.8387,
+          "graph_geodesic": 0.8251,
+          "knn": 0.7961,
+          "linear": 0.8586,
+          "mahalanobis": 0.8245,
+          "tangent_subspace": 0.8165,
+          "torch_mlp": 0.7933,
+          "torch_riemannian": 0.7178
+        }
+      },
+      "16": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8379,
+          "class_mahalanobis": 0.8427,
+          "graph_geodesic": 0.821,
+          "knn": 0.8018,
+          "linear": 0.8749,
+          "mahalanobis": 0.8353,
+          "tangent_subspace": 0.8248,
+          "torch_mlp": 0.8038,
+          "torch_riemannian": 0.7156
+        }
+      },
+      "19": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.825,
+          "class_mahalanobis": 0.8244,
+          "graph_geodesic": 0.8027,
+          "knn": 0.7759,
+          "linear": 0.86,
+          "mahalanobis": 0.8228,
+          "tangent_subspace": 0.8069,
+          "torch_mlp": 0.7918,
+          "torch_riemannian": 0.7002
+        }
+      },
+      "20": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8203,
+          "class_mahalanobis": 0.8209,
+          "graph_geodesic": 0.7946,
+          "knn": 0.7664,
+          "linear": 0.8528,
+          "mahalanobis": 0.819,
+          "tangent_subspace": 0.8035,
+          "torch_mlp": 0.7922,
+          "torch_riemannian": 0.7103
+        }
+      },
+      "24": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8169,
+          "class_mahalanobis": 0.8147,
+          "graph_geodesic": 0.798,
+          "knn": 0.7558,
+          "linear": 0.8526,
+          "mahalanobis": 0.8145,
+          "tangent_subspace": 0.7946,
+          "torch_mlp": 0.7787,
+          "torch_riemannian": 0.7233
+        }
+      },
+      "28": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.812,
+          "class_mahalanobis": 0.8108,
+          "graph_geodesic": 0.7897,
+          "knn": 0.7493,
+          "linear": 0.8432,
+          "mahalanobis": 0.8094,
+          "tangent_subspace": 0.7809,
+          "torch_mlp": 0.7624,
+          "torch_riemannian": 0.7305
+        }
+      },
+      "32": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.807,
+          "class_mahalanobis": 0.8034,
+          "graph_geodesic": 0.7987,
+          "knn": 0.7613,
+          "linear": 0.8364,
+          "mahalanobis": 0.8072,
+          "tangent_subspace": 0.7816,
+          "torch_mlp": 0.7582,
+          "torch_riemannian": 0.7398
+        }
+      },
+      "8": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.7837,
+          "class_mahalanobis": 0.7959,
+          "graph_geodesic": 0.7691,
+          "knn": 0.734,
+          "linear": 0.8018,
+          "mahalanobis": 0.7798,
+          "tangent_subspace": 0.7394,
+          "torch_mlp": 0.7196,
+          "torch_riemannian": 0.7486
+        }
+      }
+    },
+    "curvature": {
+      "0": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4953
+        }
+      },
+      "12": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5325,
+          "class_mahalanobis": 0.4801,
+          "graph_geodesic": 0.5169,
+          "knn": 0.4768,
+          "linear": 0.5006,
+          "mahalanobis": 0.4924,
+          "tangent_subspace": 0.584,
+          "torch_mlp": 0.5048
+        }
+      },
+      "16": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5685,
+          "class_mahalanobis": 0.5165,
+          "graph_geodesic": 0.5416,
+          "knn": 0.5574,
+          "linear": 0.5247,
+          "mahalanobis": 0.5332,
+          "tangent_subspace": 0.6292,
+          "torch_mlp": 0.5174
+        }
+      },
+      "19": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5416,
+          "class_mahalanobis": 0.4857,
+          "graph_geodesic": 0.5476,
+          "knn": 0.515,
+          "linear": 0.484,
+          "mahalanobis": 0.5083,
+          "tangent_subspace": 0.5985,
+          "torch_mlp": 0.4737
+        }
+      },
+      "20": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5428,
+          "class_mahalanobis": 0.4979,
+          "graph_geodesic": 0.5599,
+          "knn": 0.5006,
+          "linear": 0.4956,
+          "mahalanobis": 0.5138,
+          "tangent_subspace": 0.5878,
+          "torch_mlp": 0.4684
+        }
+      },
+      "24": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.539,
+          "class_mahalanobis": 0.5078,
+          "graph_geodesic": 0.5538,
+          "knn": 0.5011,
+          "linear": 0.5165,
+          "mahalanobis": 0.5288,
+          "tangent_subspace": 0.5676,
+          "torch_mlp": 0.478
+        }
+      },
+      "28": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5359,
+          "class_mahalanobis": 0.4814,
+          "graph_geodesic": 0.5191,
+          "knn": 0.522,
+          "linear": 0.5239,
+          "mahalanobis": 0.5332,
+          "tangent_subspace": 0.551,
+          "torch_mlp": 0.4533
+        }
+      },
+      "32": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5368,
+          "class_mahalanobis": 0.4787,
+          "graph_geodesic": 0.5438,
+          "knn": 0.5164,
+          "linear": 0.525,
+          "mahalanobis": 0.5392,
+          "tangent_subspace": 0.5625,
+          "torch_mlp": 0.4691
+        }
+      },
+      "8": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5041,
+          "class_mahalanobis": 0.4404,
+          "graph_geodesic": 0.4781,
+          "knn": 0.4331,
+          "linear": 0.5054,
+          "mahalanobis": 0.4733,
+          "tangent_subspace": 0.475,
+          "torch_mlp": 0.4355
+        }
+      }
+    },
+    "curve_summary": {
+      "0": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4953
+        }
+      },
+      "12": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6095,
+          "class_mahalanobis": 0.6375,
+          "graph_geodesic": 0.5946,
+          "knn": 0.6054,
+          "linear": 0.6352,
+          "mahalanobis": 0.6309,
+          "tangent_subspace": 0.6174,
+          "torch_mlp": 0.6437
+        }
+      },
+      "16": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5988,
+          "class_mahalanobis": 0.6214,
+          "graph_geodesic": 0.569,
+          "knn": 0.6066,
+          "linear": 0.6077,
+          "mahalanobis": 0.6088,
+          "tangent_subspace": 0.5719,
+          "torch_mlp": 0.583
+        }
+      },
+      "19": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5154,
+          "class_mahalanobis": 0.5577,
+          "graph_geodesic": 0.4846,
+          "knn": 0.5502,
+          "linear": 0.5639,
+          "mahalanobis": 0.5553,
+          "tangent_subspace": 0.5416,
+          "torch_mlp": 0.5301
+        }
+      },
+      "20": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5037,
+          "class_mahalanobis": 0.5473,
+          "graph_geodesic": 0.4934,
+          "knn": 0.5387,
+          "linear": 0.5567,
+          "mahalanobis": 0.5476,
+          "tangent_subspace": 0.5378,
+          "torch_mlp": 0.5224
+        }
+      },
+      "24": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.4392,
+          "class_mahalanobis": 0.5486,
+          "graph_geodesic": 0.4517,
+          "knn": 0.5676,
+          "linear": 0.5399,
+          "mahalanobis": 0.5083,
+          "tangent_subspace": 0.5823,
+          "torch_mlp": 0.5577
+        }
+      },
+      "28": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.4293,
+          "class_mahalanobis": 0.5663,
+          "graph_geodesic": 0.4973,
+          "knn": 0.5485,
+          "linear": 0.5569,
+          "mahalanobis": 0.5199,
+          "tangent_subspace": 0.5843,
+          "torch_mlp": 0.5853
+        }
+      },
+      "32": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.4744,
+          "class_mahalanobis": 0.6458,
+          "graph_geodesic": 0.5203,
+          "knn": 0.5723,
+          "linear": 0.6101,
+          "mahalanobis": 0.561,
+          "tangent_subspace": 0.6166,
+          "torch_mlp": 0.639
+        }
+      },
+      "8": {
+        "n_features": 15,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6431,
+          "class_mahalanobis": 0.5589,
+          "graph_geodesic": 0.6501,
+          "knn": 0.6029,
+          "linear": 0.6798,
+          "mahalanobis": 0.6643,
+          "tangent_subspace": 0.5884,
+          "torch_mlp": 0.6412
+        }
+      }
+    },
+    "delta": {
+      "0": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4978
+        }
+      },
+      "12": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8093,
+          "class_mahalanobis": 0.8103,
+          "graph_geodesic": 0.8048,
+          "knn": 0.8222,
+          "linear": 0.9082,
+          "mahalanobis": 0.8076,
+          "tangent_subspace": 0.8679,
+          "torch_mlp": 0.9104
+        }
+      },
+      "16": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8268,
+          "class_mahalanobis": 0.832,
+          "graph_geodesic": 0.8145,
+          "knn": 0.8442,
+          "linear": 0.8974,
+          "mahalanobis": 0.8307,
+          "tangent_subspace": 0.871,
+          "torch_mlp": 0.8937
+        }
+      },
+      "19": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7877,
+          "class_mahalanobis": 0.7713,
+          "graph_geodesic": 0.774,
+          "knn": 0.8146,
+          "linear": 0.8893,
+          "mahalanobis": 0.7894,
+          "tangent_subspace": 0.8553,
+          "torch_mlp": 0.8698
+        }
+      },
+      "20": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7795,
+          "class_mahalanobis": 0.752,
+          "graph_geodesic": 0.7698,
+          "knn": 0.8152,
+          "linear": 0.879,
+          "mahalanobis": 0.7739,
+          "tangent_subspace": 0.8535,
+          "torch_mlp": 0.8672
+        }
+      },
+      "24": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7511,
+          "class_mahalanobis": 0.7185,
+          "graph_geodesic": 0.7434,
+          "knn": 0.8004,
+          "linear": 0.8674,
+          "mahalanobis": 0.7428,
+          "tangent_subspace": 0.8436,
+          "torch_mlp": 0.8532
+        }
+      },
+      "28": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7429,
+          "class_mahalanobis": 0.7101,
+          "graph_geodesic": 0.7468,
+          "knn": 0.8026,
+          "linear": 0.8549,
+          "mahalanobis": 0.7321,
+          "tangent_subspace": 0.8427,
+          "torch_mlp": 0.8427
+        }
+      },
+      "32": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7366,
+          "class_mahalanobis": 0.7119,
+          "graph_geodesic": 0.6702,
+          "knn": 0.7731,
+          "linear": 0.8595,
+          "mahalanobis": 0.7326,
+          "tangent_subspace": 0.8137,
+          "torch_mlp": 0.8464
+        }
+      },
+      "8": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7552,
+          "class_mahalanobis": 0.7681,
+          "graph_geodesic": 0.7466,
+          "knn": 0.7684,
+          "linear": 0.8687,
+          "mahalanobis": 0.7534,
+          "tangent_subspace": 0.8025,
+          "torch_mlp": 0.8643
+        }
+      }
+    },
+    "direction": {
+      "0": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4923
+        }
+      },
+      "12": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7971,
+          "class_mahalanobis": 0.807,
+          "graph_geodesic": 0.7582,
+          "knn": 0.7426,
+          "linear": 0.8199,
+          "mahalanobis": 0.7962,
+          "tangent_subspace": 0.7645,
+          "torch_mlp": 0.7473
+        }
+      },
+      "16": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8216,
+          "class_mahalanobis": 0.8279,
+          "graph_geodesic": 0.8022,
+          "knn": 0.7964,
+          "linear": 0.8419,
+          "mahalanobis": 0.8223,
+          "tangent_subspace": 0.8029,
+          "torch_mlp": 0.795
+        }
+      },
+      "19": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8067,
+          "class_mahalanobis": 0.8106,
+          "graph_geodesic": 0.777,
+          "knn": 0.7784,
+          "linear": 0.836,
+          "mahalanobis": 0.8049,
+          "tangent_subspace": 0.7884,
+          "torch_mlp": 0.7804
+        }
+      },
+      "20": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8017,
+          "class_mahalanobis": 0.8073,
+          "graph_geodesic": 0.7787,
+          "knn": 0.771,
+          "linear": 0.8234,
+          "mahalanobis": 0.8,
+          "tangent_subspace": 0.7787,
+          "torch_mlp": 0.7612
+        }
+      },
+      "24": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.794,
+          "class_mahalanobis": 0.7991,
+          "graph_geodesic": 0.7778,
+          "knn": 0.7444,
+          "linear": 0.8261,
+          "mahalanobis": 0.794,
+          "tangent_subspace": 0.7729,
+          "torch_mlp": 0.7661
+        }
+      },
+      "28": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7863,
+          "class_mahalanobis": 0.7923,
+          "graph_geodesic": 0.7565,
+          "knn": 0.7489,
+          "linear": 0.8139,
+          "mahalanobis": 0.7867,
+          "tangent_subspace": 0.7652,
+          "torch_mlp": 0.7501
+        }
+      },
+      "32": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7809,
+          "class_mahalanobis": 0.7877,
+          "graph_geodesic": 0.7588,
+          "knn": 0.7607,
+          "linear": 0.8128,
+          "mahalanobis": 0.7815,
+          "tangent_subspace": 0.785,
+          "torch_mlp": 0.7418
+        }
+      },
+      "8": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.735,
+          "class_mahalanobis": 0.7506,
+          "graph_geodesic": 0.6866,
+          "knn": 0.6361,
+          "linear": 0.7501,
+          "mahalanobis": 0.734,
+          "tangent_subspace": 0.7309,
+          "torch_mlp": 0.6701
+        }
+      }
+    },
+    "distances": {
+      "0": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4975
+        }
+      },
+      "12": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6735,
+          "class_mahalanobis": 0.622,
+          "graph_geodesic": 0.6606,
+          "knn": 0.6276,
+          "linear": 0.654,
+          "mahalanobis": 0.687,
+          "tangent_subspace": 0.6262,
+          "torch_mlp": 0.6121
+        }
+      },
+      "16": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6577,
+          "class_mahalanobis": 0.6478,
+          "graph_geodesic": 0.6447,
+          "knn": 0.5932,
+          "linear": 0.6574,
+          "mahalanobis": 0.6739,
+          "tangent_subspace": 0.6252,
+          "torch_mlp": 0.5887
+        }
+      },
+      "19": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6318,
+          "class_mahalanobis": 0.6532,
+          "graph_geodesic": 0.598,
+          "knn": 0.6346,
+          "linear": 0.6501,
+          "mahalanobis": 0.6673,
+          "tangent_subspace": 0.6544,
+          "torch_mlp": 0.6067
+        }
+      },
+      "20": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6241,
+          "class_mahalanobis": 0.6453,
+          "graph_geodesic": 0.5884,
+          "knn": 0.6254,
+          "linear": 0.6441,
+          "mahalanobis": 0.6642,
+          "tangent_subspace": 0.6393,
+          "torch_mlp": 0.6045
+        }
+      },
+      "24": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6194,
+          "class_mahalanobis": 0.628,
+          "graph_geodesic": 0.5918,
+          "knn": 0.6213,
+          "linear": 0.6115,
+          "mahalanobis": 0.6494,
+          "tangent_subspace": 0.6492,
+          "torch_mlp": 0.581
+        }
+      },
+      "28": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6237,
+          "class_mahalanobis": 0.632,
+          "graph_geodesic": 0.6023,
+          "knn": 0.6278,
+          "linear": 0.6197,
+          "mahalanobis": 0.6571,
+          "tangent_subspace": 0.6478,
+          "torch_mlp": 0.5662
+        }
+      },
+      "32": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6222,
+          "class_mahalanobis": 0.6348,
+          "graph_geodesic": 0.594,
+          "knn": 0.573,
+          "linear": 0.6364,
+          "mahalanobis": 0.6393,
+          "tangent_subspace": 0.6419,
+          "torch_mlp": 0.6413
+        }
+      },
+      "8": {
+        "n_features": 28,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6982,
+          "class_mahalanobis": 0.6115,
+          "graph_geodesic": 0.6872,
+          "knn": 0.6482,
+          "linear": 0.6496,
+          "mahalanobis": 0.6715,
+          "tangent_subspace": 0.5562,
+          "torch_mlp": 0.6385
+        }
+      }
+    },
+    "final": {
+      "0": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4978
+        }
+      },
+      "12": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8158,
+          "class_mahalanobis": 0.8282,
+          "graph_geodesic": 0.7969,
+          "knn": 0.8581,
+          "linear": 0.9018,
+          "mahalanobis": 0.8172,
+          "tangent_subspace": 0.8957,
+          "torch_mlp": 0.9034
+        }
+      },
+      "16": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8343,
+          "class_mahalanobis": 0.8435,
+          "graph_geodesic": 0.8197,
+          "knn": 0.8676,
+          "linear": 0.8857,
+          "mahalanobis": 0.8371,
+          "tangent_subspace": 0.8955,
+          "torch_mlp": 0.892
+        }
+      },
+      "19": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8161,
+          "class_mahalanobis": 0.823,
+          "graph_geodesic": 0.7969,
+          "knn": 0.853,
+          "linear": 0.8725,
+          "mahalanobis": 0.8158,
+          "tangent_subspace": 0.8889,
+          "torch_mlp": 0.8809
+        }
+      },
+      "20": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8107,
+          "class_mahalanobis": 0.8158,
+          "graph_geodesic": 0.7986,
+          "knn": 0.8516,
+          "linear": 0.8574,
+          "mahalanobis": 0.8101,
+          "tangent_subspace": 0.885,
+          "torch_mlp": 0.8714
+        }
+      },
+      "24": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.799,
+          "class_mahalanobis": 0.7866,
+          "graph_geodesic": 0.7935,
+          "knn": 0.8351,
+          "linear": 0.8528,
+          "mahalanobis": 0.7839,
+          "tangent_subspace": 0.8773,
+          "torch_mlp": 0.8656
+        }
+      },
+      "28": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7918,
+          "class_mahalanobis": 0.7809,
+          "graph_geodesic": 0.7921,
+          "knn": 0.8453,
+          "linear": 0.8554,
+          "mahalanobis": 0.7757,
+          "tangent_subspace": 0.8752,
+          "torch_mlp": 0.8639
+        }
+      },
+      "32": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.788,
+          "class_mahalanobis": 0.7671,
+          "graph_geodesic": 0.8158,
+          "knn": 0.8479,
+          "linear": 0.8567,
+          "mahalanobis": 0.7702,
+          "tangent_subspace": 0.8786,
+          "torch_mlp": 0.8619
+        }
+      },
+      "8": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7832,
+          "class_mahalanobis": 0.7827,
+          "graph_geodesic": 0.7719,
+          "knn": 0.8113,
+          "linear": 0.8635,
+          "mahalanobis": 0.7733,
+          "tangent_subspace": 0.8293,
+          "torch_mlp": 0.8576
+        }
+      }
+    },
+    "gram": {
+      "0": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4947
+        }
+      },
+      "12": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6931,
+          "class_mahalanobis": 0.639,
+          "graph_geodesic": 0.6947,
+          "knn": 0.5637,
+          "linear": 0.6518,
+          "mahalanobis": 0.6678,
+          "tangent_subspace": 0.6022,
+          "torch_mlp": 0.6266
+        }
+      },
+      "16": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6992,
+          "class_mahalanobis": 0.6798,
+          "graph_geodesic": 0.7041,
+          "knn": 0.6535,
+          "linear": 0.6928,
+          "mahalanobis": 0.714,
+          "tangent_subspace": 0.6592,
+          "torch_mlp": 0.688
+        }
+      },
+      "19": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6753,
+          "class_mahalanobis": 0.6813,
+          "graph_geodesic": 0.6606,
+          "knn": 0.634,
+          "linear": 0.6704,
+          "mahalanobis": 0.7,
+          "tangent_subspace": 0.6458,
+          "torch_mlp": 0.6829
+        }
+      },
+      "20": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6687,
+          "class_mahalanobis": 0.6757,
+          "graph_geodesic": 0.6591,
+          "knn": 0.6481,
+          "linear": 0.6582,
+          "mahalanobis": 0.6937,
+          "tangent_subspace": 0.6365,
+          "torch_mlp": 0.6742
+        }
+      },
+      "24": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6592,
+          "class_mahalanobis": 0.6392,
+          "graph_geodesic": 0.6736,
+          "knn": 0.6705,
+          "linear": 0.6221,
+          "mahalanobis": 0.6657,
+          "tangent_subspace": 0.6417,
+          "torch_mlp": 0.6263
+        }
+      },
+      "28": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6646,
+          "class_mahalanobis": 0.6351,
+          "graph_geodesic": 0.6619,
+          "knn": 0.6671,
+          "linear": 0.6204,
+          "mahalanobis": 0.664,
+          "tangent_subspace": 0.6333,
+          "torch_mlp": 0.617
+        }
+      },
+      "32": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6556,
+          "class_mahalanobis": 0.6186,
+          "graph_geodesic": 0.6302,
+          "knn": 0.6328,
+          "linear": 0.6414,
+          "mahalanobis": 0.6491,
+          "tangent_subspace": 0.6143,
+          "torch_mlp": 0.605
+        }
+      },
+      "8": {
+        "n_features": 36,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7084,
+          "class_mahalanobis": 0.6256,
+          "graph_geodesic": 0.6924,
+          "knn": 0.6515,
+          "linear": 0.6584,
+          "mahalanobis": 0.6669,
+          "tangent_subspace": 0.535,
+          "torch_mlp": 0.6326
+        }
+      }
+    },
+    "mean": {
+      "0": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4978
+        }
+      },
+      "12": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8365,
+          "class_mahalanobis": 0.8361,
+          "graph_geodesic": 0.8542,
+          "knn": 0.8566,
+          "linear": 0.897,
+          "mahalanobis": 0.8351,
+          "tangent_subspace": 0.8992,
+          "torch_mlp": 0.8854
+        }
+      },
+      "16": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8341,
+          "class_mahalanobis": 0.8409,
+          "graph_geodesic": 0.8528,
+          "knn": 0.8919,
+          "linear": 0.9236,
+          "mahalanobis": 0.8319,
+          "tangent_subspace": 0.9174,
+          "torch_mlp": 0.9109
+        }
+      },
+      "19": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8227,
+          "class_mahalanobis": 0.8237,
+          "graph_geodesic": 0.8553,
+          "knn": 0.8648,
+          "linear": 0.9137,
+          "mahalanobis": 0.8204,
+          "tangent_subspace": 0.897,
+          "torch_mlp": 0.8888
+        }
+      },
+      "20": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8175,
+          "class_mahalanobis": 0.8209,
+          "graph_geodesic": 0.847,
+          "knn": 0.8518,
+          "linear": 0.9098,
+          "mahalanobis": 0.8124,
+          "tangent_subspace": 0.8954,
+          "torch_mlp": 0.8865
+        }
+      },
+      "24": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8025,
+          "class_mahalanobis": 0.8093,
+          "graph_geodesic": 0.849,
+          "knn": 0.8566,
+          "linear": 0.9094,
+          "mahalanobis": 0.7946,
+          "tangent_subspace": 0.881,
+          "torch_mlp": 0.8697
+        }
+      },
+      "28": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8048,
+          "class_mahalanobis": 0.8132,
+          "graph_geodesic": 0.8406,
+          "knn": 0.8528,
+          "linear": 0.9077,
+          "mahalanobis": 0.796,
+          "tangent_subspace": 0.8903,
+          "torch_mlp": 0.8731
+        }
+      },
+      "32": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.807,
+          "class_mahalanobis": 0.8107,
+          "graph_geodesic": 0.8411,
+          "knn": 0.8334,
+          "linear": 0.8817,
+          "mahalanobis": 0.8034,
+          "tangent_subspace": 0.8316,
+          "torch_mlp": 0.8371
+        }
+      },
+      "8": {
+        "n_features": 4096,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8076,
+          "class_mahalanobis": 0.808,
+          "graph_geodesic": 0.8207,
+          "knn": 0.8401,
+          "linear": 0.891,
+          "mahalanobis": 0.7994,
+          "tangent_subspace": 0.8638,
+          "torch_mlp": 0.8732
+        }
+      }
+    },
+    "path_flat": {
+      "0": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.5059,
+          "torch_riemannian": 0.4936
+        }
+      },
+      "12": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8395,
+          "class_mahalanobis": 0.8322,
+          "graph_geodesic": 0.8244,
+          "knn": 0.8298,
+          "linear": 0.8848,
+          "mahalanobis": 0.8348,
+          "tangent_subspace": 0.8394,
+          "torch_mlp": 0.8309,
+          "torch_riemannian": 0.6677
+        }
+      },
+      "16": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8422,
+          "class_mahalanobis": 0.8375,
+          "graph_geodesic": 0.8313,
+          "knn": 0.8588,
+          "linear": 0.9012,
+          "mahalanobis": 0.8399,
+          "tangent_subspace": 0.8612,
+          "torch_mlp": 0.8398,
+          "torch_riemannian": 0.7029
+        }
+      },
+      "19": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8339,
+          "class_mahalanobis": 0.825,
+          "graph_geodesic": 0.8217,
+          "knn": 0.8444,
+          "linear": 0.8923,
+          "mahalanobis": 0.8346,
+          "tangent_subspace": 0.8402,
+          "torch_mlp": 0.8389,
+          "torch_riemannian": 0.68
+        }
+      },
+      "20": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8316,
+          "class_mahalanobis": 0.8219,
+          "graph_geodesic": 0.8124,
+          "knn": 0.8418,
+          "linear": 0.883,
+          "mahalanobis": 0.8302,
+          "tangent_subspace": 0.835,
+          "torch_mlp": 0.8365,
+          "torch_riemannian": 0.6869
+        }
+      },
+      "24": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8227,
+          "class_mahalanobis": 0.8077,
+          "graph_geodesic": 0.8084,
+          "knn": 0.8186,
+          "linear": 0.8745,
+          "mahalanobis": 0.8202,
+          "tangent_subspace": 0.8124,
+          "torch_mlp": 0.8137,
+          "torch_riemannian": 0.7009
+        }
+      },
+      "28": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8226,
+          "class_mahalanobis": 0.8066,
+          "graph_geodesic": 0.8045,
+          "knn": 0.8154,
+          "linear": 0.8655,
+          "mahalanobis": 0.8172,
+          "tangent_subspace": 0.8034,
+          "torch_mlp": 0.8019,
+          "torch_riemannian": 0.6948
+        }
+      },
+      "32": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8221,
+          "class_mahalanobis": 0.8049,
+          "graph_geodesic": 0.8014,
+          "knn": 0.8132,
+          "linear": 0.8611,
+          "mahalanobis": 0.818,
+          "tangent_subspace": 0.8192,
+          "torch_mlp": 0.7957,
+          "torch_riemannian": 0.6948
+        }
+      },
+      "8": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8099,
+          "class_mahalanobis": 0.8134,
+          "graph_geodesic": 0.8005,
+          "knn": 0.7717,
+          "linear": 0.8598,
+          "mahalanobis": 0.8076,
+          "tangent_subspace": 0.7492,
+          "torch_mlp": 0.7684,
+          "torch_riemannian": 0.6455
+        }
+      }
+    },
+    "path_stats": {
+      "0": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4948
+        }
+      },
+      "12": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6358,
+          "class_mahalanobis": 0.7,
+          "graph_geodesic": 0.6287,
+          "knn": 0.6941,
+          "linear": 0.7346,
+          "mahalanobis": 0.7209,
+          "tangent_subspace": 0.4633,
+          "torch_mlp": 0.7322
+        }
+      },
+      "16": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6358,
+          "class_mahalanobis": 0.6865,
+          "graph_geodesic": 0.6182,
+          "knn": 0.6868,
+          "linear": 0.687,
+          "mahalanobis": 0.6733,
+          "tangent_subspace": 0.5179,
+          "torch_mlp": 0.7134
+        }
+      },
+      "19": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6681,
+          "class_mahalanobis": 0.7253,
+          "graph_geodesic": 0.675,
+          "knn": 0.6735,
+          "linear": 0.7077,
+          "mahalanobis": 0.7009,
+          "tangent_subspace": 0.45,
+          "torch_mlp": 0.7103
+        }
+      },
+      "20": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6529,
+          "class_mahalanobis": 0.7192,
+          "graph_geodesic": 0.6494,
+          "knn": 0.6711,
+          "linear": 0.6834,
+          "mahalanobis": 0.6757,
+          "tangent_subspace": 0.5047,
+          "torch_mlp": 0.7072
+        }
+      },
+      "24": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6429,
+          "class_mahalanobis": 0.6664,
+          "graph_geodesic": 0.643,
+          "knn": 0.6259,
+          "linear": 0.658,
+          "mahalanobis": 0.6561,
+          "tangent_subspace": 0.5415,
+          "torch_mlp": 0.6592
+        }
+      },
+      "28": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6077,
+          "class_mahalanobis": 0.643,
+          "graph_geodesic": 0.6351,
+          "knn": 0.6292,
+          "linear": 0.6296,
+          "mahalanobis": 0.6265,
+          "tangent_subspace": 0.5654,
+          "torch_mlp": 0.6285
+        }
+      },
+      "32": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6163,
+          "class_mahalanobis": 0.6789,
+          "graph_geodesic": 0.6299,
+          "knn": 0.5939,
+          "linear": 0.6386,
+          "mahalanobis": 0.6351,
+          "tangent_subspace": 0.5714,
+          "torch_mlp": 0.6791
+        }
+      },
+      "8": {
+        "n_features": 8,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.6637,
+          "class_mahalanobis": 0.6952,
+          "graph_geodesic": 0.6781,
+          "knn": 0.6778,
+          "linear": 0.6982,
+          "mahalanobis": 0.6959,
+          "tangent_subspace": 0.5339,
+          "torch_mlp": 0.7096
+        }
+      }
+    },
+    "relative_path": {
+      "0": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.5059,
+          "torch_riemannian": 0.4936
+        }
+      },
+      "12": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8279,
+          "class_mahalanobis": 0.8159,
+          "graph_geodesic": 0.8019,
+          "knn": 0.7602,
+          "linear": 0.8693,
+          "mahalanobis": 0.8281,
+          "tangent_subspace": 0.813,
+          "torch_mlp": 0.8371,
+          "torch_riemannian": 0.6976
+        }
+      },
+      "16": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8302,
+          "class_mahalanobis": 0.824,
+          "graph_geodesic": 0.8217,
+          "knn": 0.8082,
+          "linear": 0.894,
+          "mahalanobis": 0.8317,
+          "tangent_subspace": 0.8217,
+          "torch_mlp": 0.8254,
+          "torch_riemannian": 0.7137
+        }
+      },
+      "19": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8175,
+          "class_mahalanobis": 0.7942,
+          "graph_geodesic": 0.8039,
+          "knn": 0.7704,
+          "linear": 0.8851,
+          "mahalanobis": 0.819,
+          "tangent_subspace": 0.7836,
+          "torch_mlp": 0.8259,
+          "torch_riemannian": 0.6801
+        }
+      },
+      "20": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8121,
+          "class_mahalanobis": 0.789,
+          "graph_geodesic": 0.7988,
+          "knn": 0.7663,
+          "linear": 0.8756,
+          "mahalanobis": 0.8127,
+          "tangent_subspace": 0.7768,
+          "torch_mlp": 0.8124,
+          "torch_riemannian": 0.6677
+        }
+      },
+      "24": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.8076,
+          "class_mahalanobis": 0.783,
+          "graph_geodesic": 0.759,
+          "knn": 0.756,
+          "linear": 0.8713,
+          "mahalanobis": 0.8101,
+          "tangent_subspace": 0.7654,
+          "torch_mlp": 0.8028,
+          "torch_riemannian": 0.6759
+        }
+      },
+      "28": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.7993,
+          "class_mahalanobis": 0.7787,
+          "graph_geodesic": 0.7514,
+          "knn": 0.7366,
+          "linear": 0.857,
+          "mahalanobis": 0.8028,
+          "tangent_subspace": 0.7473,
+          "torch_mlp": 0.7915,
+          "torch_riemannian": 0.6793
+        }
+      },
+      "32": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.786,
+          "class_mahalanobis": 0.764,
+          "graph_geodesic": 0.7305,
+          "knn": 0.7126,
+          "linear": 0.8437,
+          "mahalanobis": 0.7851,
+          "tangent_subspace": 0.7458,
+          "torch_mlp": 0.8103,
+          "torch_riemannian": 0.6728
+        }
+      },
+      "8": {
+        "n_features": 32768,
+        "path_shape": [
+          8,
+          4096
+        ],
+        "probes": {
+          "centroid": 0.7741,
+          "class_mahalanobis": 0.7579,
+          "graph_geodesic": 0.7658,
+          "knn": 0.7165,
+          "linear": 0.8224,
+          "mahalanobis": 0.7709,
+          "tangent_subspace": 0.6804,
+          "torch_mlp": 0.7736,
+          "torch_riemannian": 0.7237
+        }
+      }
+    },
+    "velocity": {
+      "0": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.5,
+          "class_mahalanobis": 0.5,
+          "graph_geodesic": 0.5018,
+          "knn": 0.4937,
+          "linear": 0.5,
+          "mahalanobis": 0.5,
+          "tangent_subspace": 0.5,
+          "torch_mlp": 0.4923
+        }
+      },
+      "12": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7722,
+          "class_mahalanobis": 0.8139,
+          "graph_geodesic": 0.749,
+          "knn": 0.6893,
+          "linear": 0.8069,
+          "mahalanobis": 0.7715,
+          "tangent_subspace": 0.7583,
+          "torch_mlp": 0.7367
+        }
+      },
+      "16": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.8022,
+          "class_mahalanobis": 0.8315,
+          "graph_geodesic": 0.7576,
+          "knn": 0.7144,
+          "linear": 0.8343,
+          "mahalanobis": 0.801,
+          "tangent_subspace": 0.7909,
+          "torch_mlp": 0.7819
+        }
+      },
+      "19": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7825,
+          "class_mahalanobis": 0.8034,
+          "graph_geodesic": 0.7661,
+          "knn": 0.7125,
+          "linear": 0.8231,
+          "mahalanobis": 0.7785,
+          "tangent_subspace": 0.7603,
+          "torch_mlp": 0.7534
+        }
+      },
+      "20": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7771,
+          "class_mahalanobis": 0.7974,
+          "graph_geodesic": 0.7614,
+          "knn": 0.6983,
+          "linear": 0.8149,
+          "mahalanobis": 0.7739,
+          "tangent_subspace": 0.7501,
+          "torch_mlp": 0.7343
+        }
+      },
+      "24": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7722,
+          "class_mahalanobis": 0.7823,
+          "graph_geodesic": 0.7613,
+          "knn": 0.7007,
+          "linear": 0.8127,
+          "mahalanobis": 0.7674,
+          "tangent_subspace": 0.7405,
+          "torch_mlp": 0.7391
+        }
+      },
+      "28": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7655,
+          "class_mahalanobis": 0.7732,
+          "graph_geodesic": 0.7726,
+          "knn": 0.6636,
+          "linear": 0.8049,
+          "mahalanobis": 0.7595,
+          "tangent_subspace": 0.7294,
+          "torch_mlp": 0.7239
+        }
+      },
+      "32": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7592,
+          "class_mahalanobis": 0.7688,
+          "graph_geodesic": 0.7349,
+          "knn": 0.7389,
+          "linear": 0.8093,
+          "mahalanobis": 0.7527,
+          "tangent_subspace": 0.7349,
+          "torch_mlp": 0.728
+        }
+      },
+      "8": {
+        "n_features": 28672,
+        "path_shape": null,
+        "probes": {
+          "centroid": 0.7149,
+          "class_mahalanobis": 0.7614,
+          "graph_geodesic": 0.7136,
+          "knn": 0.6657,
+          "linear": 0.7212,
+          "mahalanobis": 0.714,
+          "tangent_subspace": 0.701,
+          "torch_mlp": 0.6477
+        }
+      }
+    }
+  },
+  "config": "synthetic_pressure_llama8b",
+  "features": [
+    "final",
+    "mean",
+    "delta",
+    "path_flat",
+    "relative_path",
+    "centered_path",
+    "velocity",
+    "acceleration",
+    "direction",
+    "gram",
+    "distances",
+    "path_stats",
+    "curvature",
+    "curve_summary"
+  ],
+  "grouping": "paired_scenario_id",
+  "labels_path": "data/raw/synthetic_pressure/labels_deepseek_v4_pro_max/labels.jsonl",
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "n": 169,
+  "n_sc": 92,
+  "n_sf": 77,
+  "probes": [
+    "linear",
+    "torch_mlp",
+    "mahalanobis",
+    "class_mahalanobis",
+    "centroid",
+    "knn",
+    "tangent_subspace",
+    "graph_geodesic",
+    "torch_riemannian"
+  ],
+  "scope": "deepseek_pairgroup",
+  "summary": [
+    {
+      "best_auroc": 0.9018,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "final",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.9034,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "final",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.8371,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "final",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.8435,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "final",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.8343,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "final",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.8676,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "final",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.8957,
+      "best_layer": 12,
+      "family": "manifold",
+      "feature": "final",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.8197,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "final",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "final",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.9236,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "mean",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.9109,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "mean",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.8351,
+      "best_layer": 12,
+      "family": "metric",
+      "feature": "mean",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.8409,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "mean",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.8365,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "mean",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.8919,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "mean",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.9174,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "mean",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.8553,
+      "best_layer": 19,
+      "family": "manifold",
+      "feature": "mean",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "mean",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.9082,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "delta",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.9104,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "delta",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.8307,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "delta",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.832,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "delta",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.8268,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "delta",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.8442,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "delta",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.871,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "delta",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.8145,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "delta",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "delta",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.9012,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "path_flat",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.8398,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "path_flat",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.8399,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "path_flat",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.8375,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "path_flat",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.8422,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "path_flat",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.8588,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "path_flat",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.8612,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "path_flat",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.8313,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "path_flat",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": 0.7029,
+      "best_layer": 16,
+      "family": "riemannian_approx",
+      "feature": "path_flat",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.894,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "relative_path",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.8371,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "relative_path",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.8317,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "relative_path",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.824,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "relative_path",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.8302,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "relative_path",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.8082,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "relative_path",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.8217,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "relative_path",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.8217,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "relative_path",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": 0.7237,
+      "best_layer": 8,
+      "family": "riemannian_approx",
+      "feature": "relative_path",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.8749,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "centered_path",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.8038,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "centered_path",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.8353,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "centered_path",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.8427,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "centered_path",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.8379,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "centered_path",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.8018,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "centered_path",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.8248,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "centered_path",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.8251,
+      "best_layer": 12,
+      "family": "manifold",
+      "feature": "centered_path",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": 0.7486,
+      "best_layer": 8,
+      "family": "riemannian_approx",
+      "feature": "centered_path",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.8343,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "velocity",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.7819,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "velocity",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.801,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "velocity",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.8315,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "velocity",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.8022,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "velocity",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.7389,
+      "best_layer": 32,
+      "family": "euclidean",
+      "feature": "velocity",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.7909,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "velocity",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.7726,
+      "best_layer": 28,
+      "family": "manifold",
+      "feature": "velocity",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "velocity",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.7681,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "acceleration",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.7271,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "acceleration",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.7537,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "acceleration",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.7866,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "acceleration",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.7523,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "acceleration",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.7146,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "acceleration",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.787,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "acceleration",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.7278,
+      "best_layer": 24,
+      "family": "manifold",
+      "feature": "acceleration",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "acceleration",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.8419,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "direction",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.795,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "direction",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.8223,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "direction",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.8279,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "direction",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.8216,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "direction",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.7964,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "direction",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.8029,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "direction",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.8022,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "direction",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "direction",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.6928,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "gram",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.688,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "gram",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.714,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "gram",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.6813,
+      "best_layer": 19,
+      "family": "metric",
+      "feature": "gram",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.7084,
+      "best_layer": 8,
+      "family": "euclidean",
+      "feature": "gram",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.6705,
+      "best_layer": 24,
+      "family": "euclidean",
+      "feature": "gram",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.6592,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "gram",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.7041,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "gram",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "gram",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.6574,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "distances",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.6413,
+      "best_layer": 32,
+      "family": "euclidean",
+      "feature": "distances",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.687,
+      "best_layer": 12,
+      "family": "metric",
+      "feature": "distances",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.6532,
+      "best_layer": 19,
+      "family": "metric",
+      "feature": "distances",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.6982,
+      "best_layer": 8,
+      "family": "euclidean",
+      "feature": "distances",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.6482,
+      "best_layer": 8,
+      "family": "euclidean",
+      "feature": "distances",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.6544,
+      "best_layer": 19,
+      "family": "manifold",
+      "feature": "distances",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.6872,
+      "best_layer": 8,
+      "family": "manifold",
+      "feature": "distances",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "distances",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.7346,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "path_stats",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.7322,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "path_stats",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.7209,
+      "best_layer": 12,
+      "family": "metric",
+      "feature": "path_stats",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.7253,
+      "best_layer": 19,
+      "family": "metric",
+      "feature": "path_stats",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.6681,
+      "best_layer": 19,
+      "family": "euclidean",
+      "feature": "path_stats",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.6941,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "path_stats",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.5714,
+      "best_layer": 32,
+      "family": "manifold",
+      "feature": "path_stats",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.6781,
+      "best_layer": 8,
+      "family": "manifold",
+      "feature": "path_stats",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "path_stats",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.525,
+      "best_layer": 32,
+      "family": "euclidean",
+      "feature": "curvature",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.5174,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "curvature",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.5392,
+      "best_layer": 32,
+      "family": "metric",
+      "feature": "curvature",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.5165,
+      "best_layer": 16,
+      "family": "metric",
+      "feature": "curvature",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.5685,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "curvature",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.5574,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "curvature",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.6292,
+      "best_layer": 16,
+      "family": "manifold",
+      "feature": "curvature",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.5599,
+      "best_layer": 20,
+      "family": "manifold",
+      "feature": "curvature",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "curvature",
+      "probe": "torch_riemannian"
+    },
+    {
+      "best_auroc": 0.6798,
+      "best_layer": 8,
+      "family": "euclidean",
+      "feature": "curve_summary",
+      "probe": "linear"
+    },
+    {
+      "best_auroc": 0.6437,
+      "best_layer": 12,
+      "family": "euclidean",
+      "feature": "curve_summary",
+      "probe": "torch_mlp"
+    },
+    {
+      "best_auroc": 0.6643,
+      "best_layer": 8,
+      "family": "metric",
+      "feature": "curve_summary",
+      "probe": "mahalanobis"
+    },
+    {
+      "best_auroc": 0.6458,
+      "best_layer": 32,
+      "family": "metric",
+      "feature": "curve_summary",
+      "probe": "class_mahalanobis"
+    },
+    {
+      "best_auroc": 0.6431,
+      "best_layer": 8,
+      "family": "euclidean",
+      "feature": "curve_summary",
+      "probe": "centroid"
+    },
+    {
+      "best_auroc": 0.6066,
+      "best_layer": 16,
+      "family": "euclidean",
+      "feature": "curve_summary",
+      "probe": "knn"
+    },
+    {
+      "best_auroc": 0.6174,
+      "best_layer": 12,
+      "family": "manifold",
+      "feature": "curve_summary",
+      "probe": "tangent_subspace"
+    },
+    {
+      "best_auroc": 0.6501,
+      "best_layer": 8,
+      "family": "manifold",
+      "feature": "curve_summary",
+      "probe": "graph_geodesic"
+    },
+    {
+      "best_auroc": null,
+      "best_layer": null,
+      "family": "riemannian_approx",
+      "feature": "curve_summary",
+      "probe": "torch_riemannian"
+    }
+  ],
+  "task": "sycophantic_flip_vs_steadfast_correct",
+  "torch_device": "cpu"
+}

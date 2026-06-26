@@ -1,0 +1,77 @@
+{
+  "method": "clustered percentile bootstrap over paired scenarios on cross-validated out-of-fold predictions",
+  "n_boot": 2000,
+  "seed": 0,
+  "rows": [
+    {
+      "level": "per_turn",
+      "judge": "Opus 4.8",
+      "probe": "mlp",
+      "layer": 16,
+      "name": "per-turn mlp",
+      "auroc": 0.8791,
+      "ci95_low": 0.8564,
+      "ci95_high": 0.9006,
+      "n_boot_valid": 2000
+    },
+    {
+      "level": "per_turn",
+      "judge": "DeepSeek v4 Pro",
+      "probe": "mlp",
+      "layer": 16,
+      "name": "per-turn mlp",
+      "auroc": 0.8845,
+      "ci95_low": 0.86,
+      "ci95_high": 0.9074,
+      "n_boot_valid": 2000
+    },
+    {
+      "level": "trajectory",
+      "judge": "Opus 4.8",
+      "feature": "delta",
+      "probe": "linear",
+      "layer": 16,
+      "name": "delta + linear",
+      "auroc": 0.9098,
+      "ci95_low": 0.8603,
+      "ci95_high": 0.9518,
+      "n_boot_valid": 2000
+    },
+    {
+      "level": "trajectory",
+      "judge": "DeepSeek v4 Pro",
+      "feature": "mean",
+      "probe": "linear",
+      "layer": 16,
+      "name": "mean + linear",
+      "auroc": 0.9236,
+      "ci95_low": 0.8805,
+      "ci95_high": 0.9614,
+      "n_boot_valid": 2000
+    },
+    {
+      "level": "trajectory",
+      "judge": "Opus 4.8",
+      "feature": "final",
+      "probe": "tangent_subspace",
+      "layer": 19,
+      "name": "final + tangent_subspace",
+      "auroc": 0.9025,
+      "ci95_low": 0.8522,
+      "ci95_high": 0.9445,
+      "n_boot_valid": 2000
+    },
+    {
+      "level": "trajectory",
+      "judge": "DeepSeek v4 Pro",
+      "feature": "mean",
+      "probe": "tangent_subspace",
+      "layer": 16,
+      "name": "mean + tangent_subspace",
+      "auroc": 0.9174,
+      "ci95_low": 0.8738,
+      "ci95_high": 0.9553,
+      "n_boot_valid": 2000
+    }
+  ]
+}
