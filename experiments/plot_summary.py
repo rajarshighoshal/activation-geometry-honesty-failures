@@ -18,6 +18,10 @@ import paper_style as ps
 
 JUDGE_LABEL = {"opus": "Opus 4.8", "deepseek": "DeepSeek v4 Pro"}
 JUDGE_COLOR = {"opus": ps.CB["blue"], "deepseek": ps.CB["red"]}
+HEADLINE_KIND = {
+    "linear": {"color": ps.CB["blue"], "marker": "o"},
+    "tangent": {"color": "#d55e00", "marker": "D"},
+}
 
 
 def dataset_filter_figure(out: Path) -> None:
@@ -73,32 +77,62 @@ def headline_ci_figure(summary: dict, out: Path) -> None:
     rows = summary["confidence_intervals"]["rows"]
     selected = []
     for row in rows:
+        judge_name = str(row["judge"]).lower()
+        judge = "Opus" if judge_name.startswith("opus") else "DeepSeek"
         if row["level"] == "per_turn":
-            label = f'{JUDGE_LABEL.get(row["judge"], row["judge"])}: per-turn MLP'
+            label = f"{judge}: per-turn MLP"
+            kind = "linear"
         elif row["probe"] == "linear":
-            label = f'{JUDGE_LABEL.get(row["judge"], row["judge"])}: traj. {row["feature"]}+linear'
+            feat = row["feature"].replace("transition_", "").replace("_", " ")
+            label = f"{judge}: linear traj ({feat})"
+            kind = "linear"
         else:
-            label = f'{JUDGE_LABEL.get(row["judge"], row["judge"])}: traj. {row["feature"]}+tangent'
-        selected.append((label, row))
+            feat = row["feature"].replace("transition_", "").replace("_", " ")
+            label = f"{judge}: tangent traj ({feat})"
+            kind = "tangent"
+        selected.append((label, kind, row))
     selected.reverse()  # top row at top
 
-    fig, ax = plt.subplots(figsize=(6.6, 3.0))
-    for i, (label, row) in enumerate(selected):
-        is_geom = row["probe"] == "tangent_subspace"
-        color = ps.CB["purple"] if is_geom else ps.CB["blue"]
+    fig, ax = plt.subplots(figsize=(8.8, 4.0))
+    for i, (_label, kind, row) in enumerate(selected):
+        style = HEADLINE_KIND[kind]
         lo, hi, point = row["ci95_low"], row["ci95_high"], row["auroc"]
-        ax.plot([lo, hi], [i, i], color=color, lw=3, solid_capstyle="round", zorder=3)
-        ax.plot([point], [i], "o", color=color, ms=6, zorder=4)
-        ax.text(hi + 0.003, i, f"{point:.3f}", va="center", fontsize=7.5)
+        ax.plot(
+            [lo, hi],
+            [i, i],
+            color=style["color"],
+            lw=4.2,
+            solid_capstyle="round",
+            zorder=3,
+        )
+        ax.plot(
+            [point],
+            [i],
+            marker=style["marker"],
+            color=style["color"],
+            markeredgecolor="white",
+            markeredgewidth=0.7,
+            ms=7.2,
+            linestyle="None",
+            zorder=4,
+        )
+        ax.text(hi + 0.003, i, f"{point:.3f}", va="center", fontsize=7.2)
     ax.set_yticks(range(len(selected)))
-    ax.set_yticklabels([lab for lab, _ in selected])
+    ax.set_yticklabels([lab for lab, _kind, _row in selected], fontsize=7.4)
     ax.set_xlim(0.82, 0.99)
     ax.set_xlabel("AUROC (95% clustered bootstrap)")
-    ax.set_title("Headline AUROC: Euclidean vs tangent-subspace", loc="left")
+    ax.set_title("Headline AUROC with clustered bootstrap intervals", loc="left", fontsize=10.5, pad=6)
+    ax.tick_params(axis="x", labelsize=7.6)
     ax.grid(axis="y", visible=False)
-    handles = [plt.Line2D([], [], color=ps.CB["blue"], lw=3, label="Euclidean baseline"),
-               plt.Line2D([], [], color=ps.CB["purple"], lw=3, label="tangent subspace")]
-    ax.legend(handles=handles, frameon=False, loc="lower right")
+    handles = [
+        plt.Line2D([0], [0], color=HEADLINE_KIND["linear"]["color"], marker=HEADLINE_KIND["linear"]["marker"],
+                   lw=3, markersize=6, label="Euclidean linear/MLP"),
+        plt.Line2D([0], [0], color=HEADLINE_KIND["tangent"]["color"], marker=HEADLINE_KIND["tangent"]["marker"],
+                   lw=3, markersize=6, label="Tangent-subspace"),
+    ]
+    ax.legend(handles=handles, frameon=True, facecolor="white", edgecolor="white",
+              framealpha=0.92, loc="upper right", ncol=1, fontsize=7.0)
+    fig.subplots_adjust(left=0.25, right=0.95, top=0.90, bottom=0.16)
     ps.save(fig, out)
 
 

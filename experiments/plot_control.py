@@ -22,10 +22,10 @@ def ramp_figure(summary: dict, out: Path) -> None:
     fig, ax = plt.subplots(figsize=(4.7, 2.6))
     ax.plot(levels, ys, "-o", color=ps.CB["blue"], ms=5, lw=1.8, zorder=3)
     ax.set_xlabel("pressure level (p0 - p6)")
-    ax.set_ylabel("P(deceptive report)")
+    ax.set_ylabel("P(false report)")
     ax.set_ylim(0, 1)
     ax.set_xticks(levels)
-    ax.set_title("Deception rate rises monotonically with pressure", loc="left")
+    ax.set_title("False-report rate rises monotonically with pressure", loc="left")
     ps.save(fig, out)
 
 
@@ -74,9 +74,45 @@ def directional_rates_figure(summary: dict, out: Path) -> None:
     ps.save(fig, out)
 
 
+def powered_followup_figure(summary: dict, out: Path) -> None:
+    rows = summary["policies"]
+    label_map = {
+        "fixed tangent": "fixed\ntangent",
+        "route hybrid": "route\nhybrid",
+        "context geom best": "context\ngeom",
+        "response geom best": "response\ngeom",
+        "target-margin argmax": "margin\nargmax",
+    }
+    labels = [label_map.get(row["label"], row["label"]) for row in rows]
+    status = [row["deceptive_status_fixes"] for row in rows]
+    strict = [row["deceptive_strict_fixes"] for row in rows]
+    harms = [row["honest_status_harms"] for row in rows]
+    xs = np.arange(len(rows))
+    width = 0.36
+    fig, ax = plt.subplots(figsize=(5.6, 3.0))
+    ax.bar(xs - width / 2, status, width=width, color=ps.CB["blue"],
+           label="status fixes", zorder=3)
+    ax.bar(xs + width / 2, strict, width=width, color=ps.CB["green"],
+           label="strict fixes", zorder=3)
+    for x, harm in zip(xs, harms):
+        ax.plot([x], [harm], "x", color=ps.CB["red"], ms=5, mew=1.4, zorder=4)
+    ax.set_xticks(xs)
+    ax.set_xticklabels(labels)
+    ax.set_ylabel("count")
+    ax.set_ylim(0, 82)
+    ax.set_title("Decision-token control: measured response dominates", loc="left")
+    ax.grid(axis="x", visible=False)
+    handles, handle_labels = ax.get_legend_handles_labels()
+    handles.append(plt.Line2D([], [], marker="x", linestyle="", color=ps.CB["red"],
+                              label="honest harms"))
+    ax.legend(handles=handles, frameon=False, loc="upper left", ncol=3, fontsize=7)
+    ps.save(fig, out)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--summary", default="results/eval/graded_control/directional_audit_summary.json")
+    parser.add_argument("--powered-summary", default="results/eval/graded_control/powered_followup_summary.json")
     parser.add_argument("--out-dir", default="figures/graded_control")
     args = parser.parse_args()
 
@@ -86,7 +122,12 @@ def main() -> None:
     ramp_figure(summary, out_dir / "graded_pressure_ramp.png")
     cosines_figure(summary, out_dir / "bidirectional_direction_cosines.png")
     directional_rates_figure(summary, out_dir / "bidirectional_control_directional_rates.png")
-    for name in ("graded_pressure_ramp", "bidirectional_direction_cosines", "bidirectional_control_directional_rates"):
+    powered_path = Path(args.powered_summary)
+    if powered_path.exists():
+        powered = json.loads(powered_path.read_text())
+        powered_followup_figure(powered, out_dir / "powered_followup_policy_comparison.png")
+    for name in ("graded_pressure_ramp", "bidirectional_direction_cosines",
+                 "bidirectional_control_directional_rates", "powered_followup_policy_comparison"):
         print(f"wrote {out_dir / name}.{{svg,png,pdf}}")
 
 

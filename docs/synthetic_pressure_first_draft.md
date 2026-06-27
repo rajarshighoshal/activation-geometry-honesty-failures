@@ -213,17 +213,19 @@ The task is synthetic. That is a feature for control, because the false premise 
 
 The current probes are diagnostic, not causal. They show that the signal is present in activations. They do not prove that the probed direction or geometric object causes the model to cave.
 
-## Next Experiments
+## Follow-Up Directions
 
-The next draft should add:
+Future versions should add:
 
-1. More retained scenarios, to tighten the wide trajectory confidence intervals (a larger generator run, or a model that already knows more of the myths).
+1. More retained scenarios, to tighten the wide trajectory confidence intervals.
 2. A small human audit of judge labels, especially hedge/accept and hedge/reject disagreements.
-3. Early-warning evaluation: train on turns up to `k` and test whether the model will later flip.
-4. OOD split: train on some pressure styles or domains and test on held-out styles/domains.
+3. Earlier-warning and transfer evaluations, rather than only finished-conversation classification.
+4. OOD splits across pressure styles or content domains.
 5. Cross-model check on a second open-weight model.
-6. A stronger paired-deviation trajectory feature using pressured minus neutral paths.
+6. Stronger geometry-aware methods, compared against the same linear and MLP baselines.
 
-The most important immediate next experiment is early warning. The current result shows I can detect caving and classify trajectories. The stronger safety result would be showing that activations predict a later flip before the assistant visibly caves.
+The current result establishes detection and trajectory classification on the retained
+pilot. The next public results should test whether the signal survives earlier, harder,
+and more out-of-distribution settings.
 
-The geometry-aware probe program — and where it could finally earn its keep over flat Euclidean summaries — is laid out with concrete win conditions in [`NEXT_STEPS.md`](NEXT_STEPS.md).
+Broad follow-up directions are listed in [`NEXT_STEPS.md`](NEXT_STEPS.md).

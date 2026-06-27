@@ -1,99 +1,45 @@
-# Next Step: Geometry-Aware Probes
+# Follow-Up Directions
 
-## Update (2026-06-26)
+This page lists high-level follow-up directions for the public artifact.
 
-Status: one model (4-bit Llama-3.1-8B), ~46 graded scenarios, synthetic — pilot.
+## Completed Status
 
-Since this plan was written I gave geometry a harder test than the finished-conversation
-classification below: a graded PASS/FAIL pressure-and-steering arc. What I found:
+The completed pilot results establish four points:
 
-- Manifold-shape geometry (tangent, curvature, point-cloud position) does not beat plain Euclidean
-  baselines for detection, and for control it loses to trivial baselines and to a random direction at
-  matched strength.
-- Control gets done by near-perfect linear detection + a per-case measured probe of which steering
-  action moves the decision. A learned selector adds nothing over picking the best-measured action.
-- What carries control is the causal response field (how the readout moves under a perturbation),
-  measured per case.
-- The correction direction is shared across content families above a permutation null.
+- pressure-induced caving is visible in Llama-3.1-8B activations;
+- trajectory summaries have higher point estimates than per-turn probes, but the pilot is
+  not yet large enough to separate that gain cleanly;
+- tangent-subspace and local point-cloud features are competitive diagnostics, while
+  Euclidean linear/MLP baselines remain the strongest simple reference point in this
+  artifact;
+- directional steering audits are necessary, because aggregate correction rates can hide
+  one-way label pushing.
 
-Next steps I'm pursuing, in order:
+## Follow-Up Directions
 
-1. Replicate on a second model / fp16 — remove the single-model and 4-bit caveats and check the
-   results hold across architectures.
-2. Scale the dataset so I can test whether the response field can be *predicted* from the
-   representation, not just measured.
-3. Cross-model alignment — fit the correction direction on one model, test transfer to another up to
-   an orthogonal alignment.
+1. **Replication.** Re-run the strongest completed evaluations on additional random
+   splits and, where feasible, a second open-weight model.
+2. **Scale.** Increase the retained scenario count so trajectory and geometry-vs-linear
+   comparisons have tighter confidence intervals.
+3. **Transfer.** Test whether the monitoring and steering results survive changes in
+   pressure style, content family, and model family.
+4. **Control baselines.** Compare intervention methods against linear, route-wise,
+   random, measured-action, and abstention-aware baselines on the same held-out rows.
+5. **Human audit.** Add a small human check of judge labels and strict-basis steering
+   audits before making stronger claims about reasoning quality.
+6. **Richer geometry.** Evaluate stronger geometry-aware methods only under the same
+   audit standard: grouped splits, directional fix/harm tables, coherence checks, strict
+   basis checks, and matched baselines.
 
----
+## Reporting Standard
 
-This repo ships a clean pilot result: caving to a false premise under pressure is
-strongly decodable from Llama-3.1-8B-Instruct residual-stream activations, and
-full-conversation trajectory summaries detect sycophantic flips vs. steadfast-correct
-conversations at ~0.91-0.92 AUROC. The honest caveat is that **geometry-aware probes do not yet beat
-simple Euclidean baselines** (see `synthetic_pressure_first_draft.md`). Tangent-subspace
-trajectory probes are competitive but never clearly ahead of `linear`/`MLP` over `mean`
-and `delta` features.
+Future updates should report:
 
-That negative result is the starting point, not the conclusion. The geometry hypothesis
-has not been *tested where it should matter* yet — only where a flat summary already
-saturates the signal. The plan below is how I intend to give geometry a fair test.
+- grouped train/test splits;
+- confidence intervals over scenarios, not individual turns alone;
+- fixes and harms split by error direction;
+- parse/coherence and strict-basis quality;
+- simple baselines run on the same examples.
 
-## Why geometry might still matter
-
-The current win for Euclidean probes is on the easy framing: classify a *finished*
-conversation, where the endpoint already encodes the outcome. Mean/final state is enough
-because the flip has already happened. Geometry should earn its keep on the harder
-framings, where the *path* carries information the endpoint does not:
-
-- **Early warning.** Predict a *future* flip from turns `0..k`, before the model visibly
-  caves. Here the endpoint is unavailable by construction, so trajectory shape (velocity,
-  turning, drift direction) is the only signal.
-- **Paired deviation.** Each scenario has a matched neutral and pressured arm. The
-  object of interest is the deviation curve `delta(t) = pressured(t) - neutral(t)`, which
-  controls for topic, answer token, and base knowledge. Geometry of `delta(t)` is a
-  cleaner target than the raw path.
-- **Deception transfer.** Sycophancy may be too textually simple for geometry to beat a
-  linear readout. Deception (hidden belief vs. stated answer under incentive) is where a
-  manifold/curvature signal is more plausible.
-
-## Plan
-
-Concretely, in order:
-
-1. **Early-warning eval.** Reuse the saved per-turn activations; train on turns `0..k`
-   and predict the later trajectory label. Report AUROC vs. `k` for Euclidean summaries
-   *and* trajectory-shape features (the `path_stats`, `curve_summary`, `velocity`,
-   `direction` features already in `geoprobe.geometry.trajectories`). This is the single
-   most important next experiment.
-2. **Paired-deviation features.** Add a pressured-minus-neutral path feature and re-run
-   the trajectory sweep on `delta(t)` instead of the raw path.
-3. **Bootstrap CIs + a small human label audit.** Put confidence intervals on the
-   headline AUROCs and hand-check the hedge/accept and hedge/reject judge disagreements,
-   so any geometry-vs-Euclidean gap is reported with uncertainty, not a point estimate.
-4. **Learned metric / curved probes (the part this release deliberately omits).** Only
-   after 1-3 justify it, bring back curved-geometry probes — a learned Riemannian path
-   metric and a hyperbolic (Poincare-ball) probe behind known-answer correctness gates
-   (a probe claiming to use curvature must first beat a linear baseline on
-   hyperbolic-shaped synthetic data and *not* beat it on flat data before its activation
-   numbers are trusted). That gated machinery and the heavier `geoopt` dependency live in
-   the research branch, not here.
-5. **Scale and transfer ($500 follow-on grant).** Re-run the strongest setup on
-   Llama-3.3-70B and test transfer to a deception-proxy dataset (Apollo-style
-   roleplaying/insider-trading), to see whether the trajectory signal — geometric or not —
-   holds at scale and off-distribution.
-
-## What would count as a real win
-
-A nonlinear or curved probe beating a linear one on a single in-distribution split is
-**not** a win — that is generic capacity, not geometry. A geometry claim only counts if a
-geometric feature/probe wins on at least one of:
-
-- **early detection** — predicts a future flip before the model caves;
-- **OOD transfer** — train on one pressure style/domain, test on a held-out one;
-- **cross-model stability** — the same geometric feature family works across model scales;
-- **causal relevance** — steering or patching along the learned geometric object changes
-  the model's behavior.
-
-Until one of those holds, the claim stays where the first draft puts it: activation and
-trajectory monitoring work; non-Euclidean geometry is unproven.
+That standard is the main lesson of the control audit: a method can look strong in an
+aggregate table while failing one direction or relying on abstention for safety.

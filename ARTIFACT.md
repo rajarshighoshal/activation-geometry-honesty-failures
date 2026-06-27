@@ -29,8 +29,8 @@ This artifact does **not** include:
 
 - model weights;
 - large activation tensors/checkpoints;
-- the broader private research branch or work-in-progress local scripts;
-- claims that geometry-aware probes beat Euclidean baselines.
+- full raw model-generation logs beyond the committed public summaries;
+- uncompressed local activation captures used during the pilot runs.
 
 ## Claims Supported by This Artifact
 
@@ -50,7 +50,7 @@ Supported:
 6. Aggregate steering metrics can hide one-way label pushing and should be reported by
    error direction.
 
-Not supported:
+These results should not be read as establishing that:
 
 1. Non-Euclidean geometry is necessary for detecting caving.
 2. The probed directions causally control the model.
@@ -84,7 +84,7 @@ pip install -e ".[dev]"
 python3 -m pytest -q
 ```
 
-Expected result at the current artifact snapshot: 28 tests pass.
+Expected result at the current artifact snapshot: 60 tests pass.
 
 ## Full Pipeline From Scratch
 

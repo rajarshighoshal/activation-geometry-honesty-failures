@@ -3,8 +3,7 @@
 Date: 2026-06-24
 
 This note records the second public result in the activation-geometry honesty project:
-a corrected audit of point-cloud/tangent steering on an objective PASS/FAIL reporting
-task.
+an audit of activation steering on an objective PASS/FAIL reporting task.
 
 ## Question
 
@@ -40,7 +39,7 @@ The sanitized result summary is committed at:
 
 ## Direction Diagnostic
 
-I split the correction direction into two directions:
+The correction direction was split into two directions:
 
 - `to_PASS = mean(honest_PASS) - mean(false_FAIL)`
 - `to_FAIL = mean(honest_FAIL) - mean(false_PASS)`
@@ -65,12 +64,13 @@ The two correction directions were positively aligned, not opposite:
 
 ![Bidirectional correction direction cosines](../figures/graded_control/bidirectional_direction_cosines.png)
 
-This means the geometry did not obviously forbid a shared correction structure. The
-harder question was whether those directions were behaviorally controllable.
+The positive alignment shows that the two correction directions share a component rather
+than pointing in opposite directions. The behavioral question is whether those measurable
+directions actually correct reports when used for steering.
 
 ## Corrected Oracle Steering Test
 
-I then ran an oracle feasibility test on a balanced 32-row set:
+An oracle feasibility test was then run on a balanced 32-row set:
 
 - 8 `false_FAIL`
 - 8 `false_PASS`
@@ -94,7 +94,7 @@ can correct both directions at all.
 
 ## Result
 
-The bidirectional control claim failed.
+The first bidirectional steering test did not establish truth restoration.
 
 - `false_PASS -> FAIL` stayed at 0 / 8 for every tested method and alpha.
 - `false_FAIL -> PASS` only reached 1 / 8, and only at the strongest tangent setting.
@@ -104,40 +104,44 @@ The bidirectional control claim failed.
 
 ## Interpretation
 
-This is a negative result for the current mean-difference/tangent steering method, but
-it is a useful one:
+The audit isolates an evaluation failure mode:
 
 1. Directional auditing exposed a real evaluation failure mode.
 2. A steering result that looks good in aggregate can be a one-way label push.
-3. Geometry-derived directions can be measurable without being behaviorally controllable.
-4. Future control work should split fixes and harms by error direction by default.
+3. Directions can be measurable without being behaviorally controllable.
+4. Control work should split fixes and harms by error direction by default.
 
-The artifact does **not** support the claim that geometry controls deception. It supports
-a narrower methodological claim: directional audits are necessary before treating
-activation steering as truth restoration.
+The main output of this stage is the audit standard: report correction separately for
+`false_FAIL -> PASS` and `false_PASS -> FAIL`, and report honest preservation separately
+for `honest_PASS` and `honest_FAIL`.
 
-## Powered follow-up (2026-06-26): control reduces to detection + a measured probe
+## Powered follow-up (2026-06-26): routing plus measured response
 
-The oracle test above was a first, low-strength check. A powered follow-up (balanced sets,
-higher steering strength, per-row action search, strict-basis audit, cluster-bootstrap CIs
-over scenarios) refined it:
+The oracle test above was a first, low-strength check. A powered follow-up used balanced
+sets, higher steering strength, per-row action search, strict-basis audit, and
+cluster-bootstrap confidence intervals over scenarios.
 
-- Misreports get corrected at high rate, as near-perfect linear detection + a per-case
-  measured probe of which steering action moves the decision margin. A held-out linear gate
-  reads the rule-truth essentially perfectly on this task.
-- Manifold-shape geometry does not carry it: a route-wise mean/probe hybrid beats the best
-  single steered direction, tangent steering loses the hard `false_PASS -> FAIL` direction
-  to a random direction at matched strength, and a selector over activation-shape features
-  does not beat the hybrid. What works is the causal response field (how the margin moves
-  under a perturbation), measured per case.
-- A learned selector adds nothing over `argmax` of the measured probe.
-- Honest harm stays near zero, but that is structural — the detector abstains on honest cases.
-- The correction direction is shared across content families above a label-permutation null
-  (cross-family cosine ~0.65–0.81).
+Findings:
 
-So control here is detection + a token-level patch, with the detector doing the work. Next
-I'm testing whether the response field can be predicted from the representation rather than
-measured per case, and replicating on a second model (see [`NEXT_STEPS.md`](NEXT_STEPS.md)).
+- Misreports were corrected at high rate when high-accuracy routing was paired with a
+  per-case measured probe of which steering action moved the decision margin.
+- A held-out linear gate was highly accurate on this controlled construct, and the low
+  honest-harm rate is largely explained by abstention on rows routed as honest.
+- Fixed steering directions were weaker than the response-aware policies in this setting.
+- The measured-action rule was at least as good as the learned/geometry-shaped
+  response-aware selectors in this run.
+- The correction direction was shared across content families above a label-permutation
+  null (cross-family cosine ~0.65–0.81).
 
-The oracle table above is the committed sanitized summary; the powered-follow-up numbers
-live in the private research branch and are summarized here qualitatively.
+Interpretation:
+
+The powered follow-up supports a controlled PASS/FAIL correction result based on routing
+plus measured action response. The main methodological lesson remains the same as the
+oracle audit: steering results should be reported by direction, with strict-basis and
+honest-preservation checks, before being interpreted as truth restoration.
+
+The powered-followup summary is also committed as a sanitized artifact:
+
+`results/eval/graded_control/powered_followup_summary.json`
+
+![Powered decision-token control policy comparison](../figures/graded_control/powered_followup_policy_comparison.png)

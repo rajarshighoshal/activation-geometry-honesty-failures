@@ -1,5 +1,5 @@
 {
-  "claim_boundary": [
+  "interpretation_summary": [
     "Correction directions are measurable and positively aligned on paper.",
     "The corrected oracle steering test does not show bidirectional truth restoration.",
     "Aggregate steering metrics must be split by error direction."

@@ -8,8 +8,8 @@ honesty failures in language models.
 **Epistemic status:** pilot — one model (Llama-3.1-8B; 4-bit for the control experiments),
 a synthetic construct, ~100 scenarios for the headline trajectory split and ~46 for the
 control audit. Per-turn detection is tightly estimated; trajectory, geometry, and control
-numbers are at pilot precision. Active follow-up (second model, scale, cross-model
-alignment) in [`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md).
+numbers are at pilot precision. Broad follow-up directions are in
+[`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md).
 
 When a user keeps insisting on something false, an instruction-tuned model will
 sometimes hold its ground and sometimes **cave** — quietly dropping the correct
@@ -17,10 +17,9 @@ answer and endorsing the user's false premise. This repo asks a simple monitorin
 question: *can you see that caving in the model's own activations, and does watching
 the whole multi-turn conversation help you catch it?*
 
-This repository is the public, cleaned record of the work so far. It is not the full
-private research branch. It includes the paired synthetic-pressure pilot, the current
-graded-control directional audit, selected result artifacts, figures, tests, and
-reproduction scripts.
+This repository is the public, cleaned record of the completed pilot results. It includes
+the paired synthetic-pressure pilot, the current graded-control directional audit,
+selected result artifacts, figures, tests, and reproduction scripts.
 
 ## Current artifacts
 
@@ -39,31 +38,31 @@ The first artifact answers yes for detection, and a qualified yes for trajectori
   (**~0.91–0.92 AUROC**) for separating sycophantic flips from conversations that stay
   correct under pressure — though the trajectory split has only ~100 scenarios, so its
   bootstrap intervals are wide and overlap the per-turn band; treat the gain as suggestive.
-- **Geometry-aware probes do not yet win.** Tangent-subspace trajectory probes are
-  competitive but never clearly beat plain Euclidean linear/MLP baselines. That
-  negative result is kept here on purpose, not buried.
+- **Geometry-aware probes are competitive but not separated from Euclidean baselines.**
+  Tangent-subspace trajectory probes land in the same confidence band as the plain
+  Euclidean linear/MLP baselines in this pilot.
 
 ## Documentation
 
 Three write-ups accompany the code:
 
 - [`docs/synthetic_pressure_first_draft.md`](docs/synthetic_pressure_first_draft.md) — pilot research note: how activation trajectories detect caving under pressure.
-- [`docs/graded_control_directional_audit.md`](docs/graded_control_directional_audit.md) — the graded PASS/FAIL control audit, including the powered follow-up (control = detection + a measured probe).
-- [`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md) — the geometry-aware probe roadmap and concrete win conditions.
+- [`docs/graded_control_directional_audit.md`](docs/graded_control_directional_audit.md) — the graded PASS/FAIL control audit and powered follow-up.
+- [`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md) — high-level follow-up directions.
 
 ## What we found
 
-- **Detection works, and it's linear.** Caving / misreporting under pressure is decodable
+- **Detection works, and it's mostly linear in these pilots.** Caving / misreporting under pressure is decodable
   from the residual stream with a linear probe — ~0.88 AUROC per turn on the sycophancy
-  pilot, and on the PASS/FAIL task a held-out linear gate reads the rule-truth near-
-  perfectly. This matches prior probe-based deception detection.
-- **Manifold-shape geometry does not beat linear.** Tangent, curvature, and point-cloud-
-  position features are competitive but never clearly beat Euclidean baselines for
-  detection, and for control they lose to trivial baselines and to a random direction at
-  matched strength.
-- **Control reduces to detection + a measured response probe.** Misreports get corrected
-  by a near-perfect linear detector plus a per-case measurement of which steering action
-  moves the decision; a learned selector adds nothing over picking the best-measured one.
+  pilot, and on the PASS/FAIL task a held-out linear gate is highly accurate on this
+  controlled construct. This matches prior probe-based deception detection.
+- **The geometry-aware methods tested here are diagnostic, not dominant.** Tangent-subspace
+  probes and local point-cloud features help characterize the activation space, but their
+  measured performance stays inside the Euclidean baseline band in this artifact.
+- **Steering needs directional audits.** Misreports can be corrected in the controlled
+  PASS/FAIL task, but aggregate fix rates can hide one-way label pushing. The strongest
+  public control result combines high-accuracy routing with a measured action-response
+  check.
 - **The correction direction is shared across content families** — cross-family cosine
   ~0.65–0.81 above a permutation null. A preliminary universality signal.
 
@@ -71,10 +70,9 @@ The methodology — directional audits (fixes/harms split by error type), gated-
 baselines, strict-basis checks, and a response-vs-context decomposition — is what keeps a
 one-way label-pusher from looking like control.
 
-**Next steps I'm pursuing** ([`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md)): replicate on a
-second model and in fp16; scale the dataset to test whether the control response field can
-be *predicted* from the representation rather than measured per case; and test cross-model
-alignment of the correction direction.
+**Broad next steps** ([`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md)): replicate, scale,
+test transfer, and compare stronger geometry-aware intervention methods against simple
+baselines.
 
 ## Synthetic-pressure artifact snapshot
 
@@ -106,17 +104,18 @@ Short version:
   above a permutation null.
 - A first low-strength oracle steering test did not restore truth in both directions (the
   hard `false_PASS -> FAIL` direction stayed at 0/8).
-- A powered follow-up showed the fuller picture: misreports get corrected at high rate,
-  but as near-perfect linear detection + a per-case measured response probe. Manifold-
-  shape geometry loses to trivial baselines, and a learned selector adds nothing over the
-  best-measured action. So control here is detection + a token-level patch.
+- A powered follow-up showed that misreports can be corrected at high rate when routing is
+  paired with a measured action-response check; fixed tangent steering alone was weaker
+  than the response-aware policies in this setting.
 
-Next I'm testing whether the response field can be *predicted* from the representation
-rather than measured per case — which needs more data and a second model.
+Further work should replicate this result, test scale/transfer, and compare stronger
+geometry-aware intervention methods against the measured-action baseline.
 
 ![Graded PASS/FAIL pressure ramp](figures/graded_control/graded_pressure_ramp.png)
 
 ![Bidirectional steering audit](figures/graded_control/bidirectional_control_directional_rates.png)
+
+![Powered decision-token control policy comparison](figures/graded_control/powered_followup_policy_comparison.png)
 
 ## A concrete example
 
@@ -149,7 +148,7 @@ and regenerated by a single script (see [Reproduce](#reproduce)).
 
 ![Per-turn AUROC by probe under Opus and DeepSeek labels](figures/per_turn_auroc.svg)
 
-![Headline AUROC with clustered bootstrap confidence intervals](figures/headline_ci.svg)
+![Headline AUROC with clustered bootstrap confidence intervals](figures/headline_ci.png)
 
 **Dataset (after the knowledge-check filter):**
 
@@ -327,11 +326,10 @@ src/geoprobe/                                # activation loading, probes, traje
 docs/
   synthetic_pressure_first_draft.md          # pilot research note (detection)
   graded_control_directional_audit.md        # graded PASS/FAIL control audit
-  NEXT_STEPS.md                              # geometry-aware probe roadmap
+  NEXT_STEPS.md                              # high-level follow-up directions
 ```
 
-This release ships only the code that produced the results above — nothing from the
-broader geometry research branch.
+This release ships the code and artifacts needed to reproduce the results above.
 
 ## Limitations
 
@@ -346,10 +344,7 @@ broader geometry research branch.
 
 ## Next step
 
-The geometry-aware probe program — testing whether non-Euclidean structure helps where
-flat summaries already saturate (early warning, paired neutral-minus-pressured
-deviation, learned/curved metrics behind correctness gates, and deception transfer) —
-is laid out with concrete win conditions in [`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md).
+Broad follow-up directions are listed in [`docs/NEXT_STEPS.md`](docs/NEXT_STEPS.md).
 The deeper writeup of the current result is in
 [`docs/synthetic_pressure_first_draft.md`](docs/synthetic_pressure_first_draft.md).
 
